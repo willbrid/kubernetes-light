@@ -26,7 +26,8 @@ ou alors
 kubectl get pods -A
 ```
 
-**- créer un espace de nom**
+**- créer un espace de nom** <br>
+Dans cet exemple, on crée un espace de nom appelé **digitalisation**.
 ```
 kubectl create namespace digitalisation
 ```
