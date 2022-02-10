@@ -130,7 +130,7 @@ kubeadm token create --print-join-command
 
 NB: cette commande est également affichée à la fin de l'exécution de la commande **kubeadm init**.
 
-**Jointure proprement dit**
+**Jointure proprement dit** <br>
 Copiez la commande join (résultat de la commande ci-dessus) à partir du nœud master. Exécutez-le sur chaque nœud worker en tant que root (c'est-à-dire avec sudo ).
 ```
 sudo kubeadm join ...
