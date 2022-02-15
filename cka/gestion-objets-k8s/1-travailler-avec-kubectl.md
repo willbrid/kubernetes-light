@@ -33,7 +33,7 @@ kubectl get pods
 
 Cette commande va lister l'ensemble des pods dans le namespace par défaut.
 
-**- expérimenter le listing des pods avec différents formats de sortie**
+**- expérimenter le listing des pods avec différents formats de sortie**<br>
 **--- afficher le listing avec plus de colonnes d'informations**
 ```
 kubectl get pods -o wide
