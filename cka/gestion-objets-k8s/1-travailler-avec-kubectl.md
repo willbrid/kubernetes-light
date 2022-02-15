@@ -1,5 +1,5 @@
 # Travailler avec kubectl sur les objets k8s
-Cette section présentera quelques exemples avec les pods
+## Quelques exemples avec les pods
 
 **- créer un pod**
 Supposons la définition yaml d'un pod nginx dans le fichier **pod.yml**
@@ -83,4 +83,47 @@ L'option **--** permet de préciser la commande à exécuter dans le conteneur. 
 **- supprimer un pod** 
 ```
 kubectl delete pod nginx-pod
+```
+
+## Quelques exemples avec les déploiements
+**- créer un déploiement avec la méthode impérative**
+```
+kubectl create deployment nginx-deployment --image=nginx
+```
+
+**- obtenir un échantillon de yaml sans créer l'objet**
+```
+kubectl create deployment nginx-deployment --image=nginx --dry-run -o yaml
+```
+L'option **--dry-run** permet de simuler la création de l'objet **deployment** sans le créer.<br>
+L'on peut sauvegarder cet échantillon de yaml dans un fichier.
+```
+kubectl create deployment nginx-deployment --image=nginx --dry-run -o yaml > deployment.yml
+```
+
+**- créer un déploiement avec la méthode déclarative (avec un fichier)**
+```
+kubectl create -f deployment.yml
+```
+
+**- scaler un déploiement**
+```
+kubectl scale deployment nginx-deployment --replicas=5
+```
+
+L'option **--replicas** permet de préciser le nombre de pods pour ce déploiement.
+
+**- scaler un déploiement en enregistrant sa commande**
+```
+kubectl scale deployment nginx-deployment replicas=5 --record
+```
+
+**- afficher le détail d'un déploiement**
+```
+kubectl describe deployment nginx-deployment
+```
+
+**- supprimer un déploiement** 
+```
+kubectl delete deployment nginx-deployment
 ```
