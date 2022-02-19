@@ -30,7 +30,7 @@ kubectl create -f role-reader.yml
 ```
 
 **- Lier le rôle à l'utilisateur dev**<br>
-Nous créons un object **RoleBinding** pour lier le rôle **role-reader** à l'utilisateur de **dev**.<br>
+Nous créons un objet **RoleBinding** pour lier le rôle **role-reader** à l'utilisateur de **dev**.<br>
 
 Nous définissons un fichier rolebinding-reader.yml
 ```
