@@ -65,4 +65,4 @@ Pour vérifier si le RBAC a été bien configuré, nous testons avec la commande
 kubectl get pods -n miamiam --kubeconfig dev-k8s-config
 ```
 
-où **kubeconfig** permet de renseigner le fichier config de k8s pour l'utilisateur dev. Ici cette commande présente simplement une manière de tester notre RBAC.
+où l'option **kubeconfig** permet de renseigner le fichier config de k8s pour l'utilisateur dev. Ici cette commande présente simplement une manière de tester notre RBAC.
