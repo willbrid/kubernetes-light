@@ -29,7 +29,7 @@ puis nous exécutons la commande de création de **role** :
 kubectl create -f role-reader.yml
 ```
 
-**- Lier le rôle à l'utilisateur dev**
+**- Lier le rôle à l'utilisateur dev**<br>
 Nous créons un object **RoleBinding** pour lier le rôle **role-reader** à l'utilisateur de **dev**.<br>
 
 Nous définissons un fichier rolebinding-reader.yml
@@ -59,7 +59,7 @@ puis nous exécutons la commande de création de l'object **rolebinding** :
 kubectl create -f rolebinding-reader.yml
 ```
 
-**- vérification avec le kubeconfig de l'utilisateur dev**
+**- vérification avec le kubeconfig de l'utilisateur dev**<br>
 Pour vérifier si le RBAC a été bien configuré, nous testons avec la commande:
 ```
 kubectl get pods -n miamiam --kubeconfig dev-k8s-config
