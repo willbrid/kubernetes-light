@@ -38,7 +38,7 @@ kubectl get sa -n default
 NB: **sa** est le dimunitif de l'objet **serviceAccount**.<br>
 
 **- attacher un role à un compte de service**<br>
-Nous utiliserons le role **role-reader** définit dans le tutoriel précédent.
+Nous utiliserons le role **role-reader** défini dans le tutoriel précédent.
 Nous définissons un fichier sa-rolebinding-reader.yml
 ```
 vi sa-rolebinding-reader.yml
