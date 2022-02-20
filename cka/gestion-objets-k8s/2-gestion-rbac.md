@@ -54,7 +54,7 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-puis nous exécutons la commande de création de l'object **rolebinding** :
+puis nous exécutons la commande de création de l'objet **rolebinding** :
 ```
 kubectl create -f rolebinding-reader.yml
 ```
