@@ -1,6 +1,6 @@
 # Gérer les comptes de services
 
-Dans cette tutoriel, nous allons créer un compte de service et utiliser un rolebinding pour relier ce compte de service à un role.
+Dans ce tutoriel, nous allons créer un compte de service et utiliser un objet rolebinding pour relier ce compte de service à un objet role.
 
 **- créer un simple compte de service**<br>
 Nous définissons un fichier payment-serviceaccount.yml
