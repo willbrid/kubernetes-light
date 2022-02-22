@@ -2,7 +2,11 @@
 ## Quelques exemples avec les pods
 
 **- créer un pod**
-Supposons la définition yaml d'un pod nginx dans le fichier **pod.yml**
+Nous créeons un objet pod *nginx-pod* :
+```
+vi pod.yml
+```
+
 ```
 apiVersion: v1
 kind: Pod

@@ -6,12 +6,11 @@ Vos développeurs vous demandent fréquemment de fournir des informations à par
 **- Créer un rôle pour l'utilisateur dev**<br>
 Nous créeons un rôle appelé **role-reader**. Nous lui fournissons un accès en lecture aux pods et aux journaux de conteneurs dans l'espace de noms **miamiam**.
 
-Nous définissons un fichier role-reader.yml
+Nous créeons un objet role *role-reader*
 ```
 vi role-reader.yml
 ```
 
-où nous insérons le contenu :
 ```
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -24,20 +23,17 @@ rules:
   verbs: ["get", "watch", "list"]
 ```
 
-puis nous exécutons la commande de création de **role** :
 ```
 kubectl create -f role-reader.yml
 ```
 
 **- Lier le rôle à l'utilisateur dev**<br>
-Nous créons un objet **RoleBinding** pour lier le rôle **role-reader** à l'utilisateur de **dev**.<br>
+Nous créons un objet roleBinding *rolebinding-reader* pour lier l'objet role *role-reader* à l'utilisateur de *dev*.<br>
 
-Nous définissons un fichier rolebinding-reader.yml
 ```
 vi rolebinding-reader.yml
 ```
 
-où nous insérons le contenu :
 ```
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -54,7 +50,6 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-puis nous exécutons la commande de création de l'objet **rolebinding** :
 ```
 kubectl create -f rolebinding-reader.yml
 ```

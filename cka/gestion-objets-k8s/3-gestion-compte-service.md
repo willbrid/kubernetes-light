@@ -3,11 +3,11 @@
 Dans ce tutoriel, nous allons créer un compte de service et utiliser un objet rolebinding pour relier ce compte de service à un objet role.
 
 **- créer un simple compte de service**<br>
-Nous définissons un fichier payment-serviceaccount.yml
+Nous définissons un objet serviceaccount *payment-serviceaccount* :
 ```
 vi payment-serviceaccount.yml
 ```
-où nous insérons le contenu :
+
 ```
 apiVersion: v1
 kind: ServiceAccount
@@ -15,7 +15,6 @@ metadata:
   name: payment-serviceaccount
 ```
 
-puis nous exécutons la commande de création de ce compte de service :
 ```
 kubectl create -f payment-serviceaccount.yml
 ```
@@ -39,11 +38,11 @@ NB: **sa** est le dimunitif de l'objet **serviceAccount**.<br>
 
 **- attacher un role à un compte de service**<br>
 Nous utiliserons le role **role-reader** défini dans le tutoriel précédent.
-Nous définissons un fichier sa-rolebinding-reader.yml
+Nous créeons un objet rolebinding *sa-rolebinding-reader* de l'espace de nom *default*
 ```
 vi sa-rolebinding-reader.yml
 ```
-où nous insérons le contenu :
+
 ```
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -60,7 +59,6 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-puis nous exécutons la commande de création de cet objet **rolebinding** :
 ```
 kubectl create -f sa-rolebinding-reader.yml
 ```
