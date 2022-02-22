@@ -1,7 +1,7 @@
 # Travailler avec kubectl sur les objets k8s
 ## Quelques exemples avec les pods
 
-**- créer un pod**
+**- créer un pod**<br>
 Nous créeons un objet pod *nginx-pod* :
 ```
 vi pod.yml
