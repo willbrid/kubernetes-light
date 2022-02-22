@@ -13,12 +13,11 @@ kubectl get --raw /apis/metrics.k8s.io/
 ```
 
 **- Création et supervision des pods**<br>
-Nous définissons un fichier metrics-test-pod.yml :
+Nous définissons un objet pod metrics-test-pod :
 ```
 vi metrics-test-pod.yml
 ```
 
-où nous insérons le contenu :
 ```
 apiVersion: v1
 kind: Pod
@@ -33,7 +32,6 @@ spec:
     command: ['sh', '-c', 'while true; do sleep 3600; done']
 ```
 
-puis nous exécutons la commande de création de cet objet **pod** :
 ```
 kubectl create -f metrics-test-pod.yml
 ```
@@ -52,4 +50,4 @@ L'on peut filtrer cet affichage avec l'option **--selector** :
 ```
 kubectl top pod --selector app=metrics-test
 ``` 
-Cela permettra d'afficher l'utilisation des ressources de pods pour tous les pods ayant ce label.
+Cela permettra d'afficher l'utilisation des ressources de pods pour tous les pods ayant le label *app=metrics-test*.
