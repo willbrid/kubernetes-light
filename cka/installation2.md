@@ -57,6 +57,7 @@ sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig
 ```
 sudo modprobe br_netfilter
 sudo sh -c "echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables"
+sudo sh -c "echo '1' > /proc/sys/net/bridge/bridge-nf-call-ip6tables"
 sudo sh -c "echo '1' > /proc/sys/net/ipv4/ip_forward"
 ```
 
@@ -128,13 +129,18 @@ sudo firewall-cmd --permanent --add-port=2379-2380/tcp
 sudo firewall-cmd --permanent --add-port=10250/tcp
 sudo firewall-cmd --permanent --add-port=10251/tcp
 sudo firewall-cmd --permanent --add-port=10252/tcp
+sudo firewall-cmd --add-masquerade --permanent
+sudo firewall-cmd --zone=public --permanent --add-rich-rule 'rule family=ipv4 source address=@ip-worker/32 accept'
 sudo firewall-cmd --reload
 ```
+
+L'on remplacera *@ip-worker* dans la commande d'option *--add-rich-rule* par chacune des adresses ip des workers. Donc cette commande devrait être éxécutée deux fois pour chacun de nos deux workers : *192.168.43.252* et *192.168.43.253* . Elle permet d'autoriser l'accès docker à partir d'un autre nœud.
 
 **Sur les noeuds worker**
 ```
 sudo firewall-cmd --permanent --add-port=10250/tcp
 sudo firewall-cmd --permanent --add-port=30000-32767/tcp
+sudo firewall-cmd --add-masquerade --permanent
 sudo firewall-cmd --reload
 ```
 
