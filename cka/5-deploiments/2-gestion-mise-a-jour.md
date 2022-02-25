@@ -45,12 +45,12 @@ kubectl get deployment test-deployment
 kubectl get pods
 ``` 
 
-Nous effectuons une autre mise à jour de déploiement, cette fois en utilisant la méthode kubectl set image. Nous utilisons intentionnellement une mauvaise version d'image.
+Nous effectuons une autre mise à jour de ce déploiement, cette fois en utilisant la méthode *kubectl set image*. Nous utilisons intentionnellement une mauvaise version d'image.
 ```
 kubectl set image deployment/test-deployment nginx=nginx:broken --record
 ```
 
-Nous vérifions à nouveau le statut de la mise à jour et nous constatons que la mise jour échoue en raison d'un échec de téléchargement de l'image *nginx=nginx:broken*.
+Nous vérifions à nouveau le statut de la mise à jour et nous constatons que la mise à jour échoue en raison d'un échec de téléchargement de l'image *nginx=nginx:broken*.
 
 ```
 kubectl rollout status deployment.v1.apps/test-deployment
