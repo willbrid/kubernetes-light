@@ -1,7 +1,7 @@
 # Gestion des ressources d'un conteneur de l'objet pod sur k8s
 Dans ce tutoriel, nous présenterons la gestion des ressources cpu et mémoire d'un conteneur dans un pod.<br>
 
-**- option resource requests**<br>
+## attribut *spec.containers.resources.requests*
 Nous créeons un pod *request-pod* en définissant sa demande en ressource :
 ```
 vi request-pod.yml
@@ -30,7 +30,7 @@ kubectl create -f request-pod.yml
 Cela permettra de créer un pod avec sa demande en ressource cpu et mémoire. Ainsi k8s va checker tous les noeuds worker pour vérifier si l'un des noeuds worker possède assez de ressource cpu et mémoire satisfaisant cette demande. Dans le cas contraire, il va laisser le pod à l'état *pending*. Cependant cela n'exclut pas le fait qu'une fois déploié sur un noeud ayant la capacité, le conteneur du pod pourra dépasser cette demande et/ou saturer le noeud.
 
 
-**- option resource requests et limits**<br>
+## attribut *spec.containers.resources.limits*
 Nous créeons un pod *request-limits-pod* en définissant sa demande en ressource :
 ```
 vi request-limits-pod.yml
@@ -59,4 +59,4 @@ spec:
 kubectl create -f request-limits-pod.yml
 ```
 
-Grâce à l'option *limits*, le conteneur du pod sera effectivement limité à la ressource cpu et mémoire qui lui a été définie.
+Grâce à l'attribut *spec.containers.resources.limits*, le conteneur du pod sera effectivement limité à la ressource cpu et mémoire qui lui a été définie.
