@@ -3,6 +3,11 @@ Nous supposons que nous avons une machine virtuelle virtual-box de 32Go de disqu
 <br>
 
 ## Installation de prometheus 2.33.4
+- Nous modifions le hostname 
+```
+sudo hostnamectl set-hostname monitoring
+```
+
 - Nous faisons la mise à jour des packages de notre système
 ```
 sudo yum update -y
