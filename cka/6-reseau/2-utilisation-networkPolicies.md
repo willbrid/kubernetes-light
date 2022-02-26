@@ -126,9 +126,9 @@ spec:
     - namespaceSelector:
         matchLabels:
           team: np-test
-      ports:
-      - port: 80
-        protocol: TCP
+    ports:
+    - port: 80
+      protocol: TCP
 ```
 
 Nous vérifions que nous pouvons à nouveau atteindre le pod serveur web nginx depuis le pod client :
