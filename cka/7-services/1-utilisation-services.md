@@ -188,7 +188,7 @@ spec:
 kubectl apply -f svc-clusterip.yml
 ```
 
-Ainsi l'on pourra mentionner ce nom au niveau de l'ingress. Au lieu d'utiliser l'option *number*, nous utilisons l'option *name* :
+Ainsi l'on pourra mentionner ce nom au niveau de l'ingress. Au lieu d'utiliser l'attribut *spec.rules.http.paths.backend.service.port.number* , nous utilisons l'attribut *spec.rules.http.paths.backend.service.port.name* :
 ```
 vi test-ingress.yml
 ```
