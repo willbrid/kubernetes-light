@@ -33,6 +33,6 @@ sudo firewall-cmd --reload
 ## Importation de modèles de tableau de bord Grafana prédéfinis
 Nous pouvons trouver tous les tableaux de bord communautaires partagés à partir des [modèles partagés Grafana](https://grafana.com/dashboards?dataSource=prometheus)
 
-- Nous sélectionnons l'option d'importation comme indiqué ci-dessous.
-- Voici les options d'importation prises en charge. Nous pouvons ajouter l'ID de tableau de bord que vous obtenez sur le site Web de grafana, télécharger le json ou coller le json dans la zone de texte.
+- Nous sélectionnons l'option d'importation.
+- Voici les options d'importation prises en charge. Nous pouvons ajouter l'ID de tableau de bord que nous obtenons sur le site Web de grafana, télécharger le json ou coller le json dans la zone de texte.
 - Nous ajoutons un nom de modèle, une source Prometheus, un dossier de tableau de bord de destination et cliquez sur *importer*.
