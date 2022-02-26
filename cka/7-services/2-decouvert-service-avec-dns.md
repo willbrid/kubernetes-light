@@ -9,12 +9,12 @@ kubectl get service svc-clusterip
 
 Nous effectueons une recherche DNS sur le service à partir du pod busybox :
 ```
-kubectl exec pod-svc-test -- nslookup <Service IP Address>
+kubectl exec pod-svc-test -- nslookup <adresse IP du service>
 ```
 
 Nous pouvons utiliser l'adresse ip du service pour éxécuter une requête depuis notre pod busybox :
 ```
-kubectl exec pod-svc-test -- curl <Service IP Address>
+kubectl exec pod-svc-test -- curl <adresse IP du service>
 ```
 
 Nous pouvons éxécuter la même requête en utilisant le nom du service :
