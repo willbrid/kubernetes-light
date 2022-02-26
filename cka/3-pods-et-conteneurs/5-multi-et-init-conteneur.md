@@ -1,7 +1,7 @@
 # Pod multi-conteneur et pod avec conteneur init
 Dans ce tutoriel, nous présenterons comment créer un pod avec plusieurs conteneurs : pod multi-conteneur et pod avec conteneur init.<br>
 
-**- pod multi-conteneur**<br>
+## pod multi-conteneur
 Nous créeons un pod multi-conteneur qui utilise un stockage partagé.
 
 ```
@@ -42,7 +42,7 @@ L'on pourra visualiser les logs de conteneur sidecar :
 kubectl logs sidecar-pod -c sidecar
 ```
 
-**- pod avec un conteneur init**<br>
+## pod avec un conteneur init
 Nous créeons un pod avec un conteneur init qui retarde le démarrage de 30 secondes.
 
 ```
