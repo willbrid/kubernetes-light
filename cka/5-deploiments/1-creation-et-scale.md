@@ -1,7 +1,7 @@
 # Création et scale d'un objet deployment de k8s
 Dans ce tutoriel, nous présenterons la création et le scale d'un objet déployment de k8s.<br>
 
-**- création d'un déploiement**<br>
+## création d'un déploiement
 Nous créeons un deploiement :
 ```
 vi test-deployment.yml
@@ -48,8 +48,8 @@ L'on peut afficher le détail de ce déploiement :
 kubectl describe deployment test-deployment
 ```
 
-**- scale d'un déploiement**<br>
-Nous faisons un scale du déploiement *test-deployment* en changeant l'option *replicas* dans son fichier manifeste :
+## scale d'un déploiement
+Nous faisons un scale du déploiement *test-deployment* en changeant l'attribut *spec.replicas* dans son fichier manifeste :
 ```
 vi test-deployment.yml
 ```
