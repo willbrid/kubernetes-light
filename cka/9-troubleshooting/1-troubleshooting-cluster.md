@@ -33,6 +33,11 @@ kubectl get pods -n kube-system
 kubectl describe pod podname -n kube-system
 ```
 
+- Nous pouvons consulter les journaux du composant *kube-apiserver*
+```
+kubectl logs -n kube-system <KUBE-APISERVER_POD_NAME>
+```
+
 - Nous pouvons consulter les journaux des services liés à k8s sur chaque nœud à l'aide de *journalctl*
 
 ```
