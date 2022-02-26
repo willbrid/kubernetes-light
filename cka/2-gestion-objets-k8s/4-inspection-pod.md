@@ -1,7 +1,7 @@
 # Inspection de l'utilisation des ressources de pod
 Dans ce tutoriel, nous installerons l'outil **metrics server** afin d'inspecter l'utilisation des ressources cpu et mémoire des pods.
 
-**- Installation de metrics server dans le cluster**<br>
+## Installation de metrics server dans le cluster
 Sur le noeud master, nous exécutons la commande :
 ```
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
@@ -12,7 +12,7 @@ Nous patientons quelques minutes, puis nous exécutons la commande de vérificat
 kubectl get --raw /apis/metrics.k8s.io/
 ```
 
-**- Création et supervision des pods**<br>
+## Création et supervision des pods
 Nous définissons un objet pod metrics-test-pod :
 ```
 vi metrics-test-pod.yml
