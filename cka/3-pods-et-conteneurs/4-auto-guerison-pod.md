@@ -1,7 +1,7 @@
 # Auto-guérison des pods sur k8s avec les stratégies de redémarrage
 Dans ce tutoriel, nous présenterons les différentes stratégies de redémarrage des pods dans un cluster.<br>
 
-**- La stratégie de redémarrage : Always**<br>
+## La stratégie de redémarrage : Always
 Nous créeons un pod avec la stratégie *Always* qui se termine après quelques secondes.
 
 ```
@@ -29,7 +29,7 @@ Ce pod sera créé et redémarré toutes les 10 secondes.<br>
 
 La stratégie *Always* est la politique de redémarrage par défaut dans K8s. Avec cette stratégie, les conteneurs seront toujours redémarrés s'ils s'arrêtent, même s'ils se sont terminés avec succès. Utilisez cette stratégie pour les applications qui doivent toujours être en cours d'exécution.<br>
 
-**- La stratégie de redémarrage : OnFailure**<br>
+## La stratégie de redémarrage : OnFailure
 Nous créeons deux pods *onfailure-pod1* et *onfailure-pod2* avec la stratégie *OnFailure*.
 
 ```
@@ -69,7 +69,7 @@ Le pod *onfailure-pod2* est créé et après 10 secondes, il est en état arrêt
 
 La stratégie *OnFailure* redémarrera les conteneurs uniquement si le processus de conteneur se termine avec un code d'erreur ou si le conteneur est déterminé comme étant défectueux par un *liveness probe*. Utilisez cette stratégie pour les applications qui doivent s'exécuter correctement, puis s'arrêter.<br>
 
-**- La stratégie de redémarrage : Never**<br>
+## La stratégie de redémarrage : Never
 Nous créeons un pod avec la stratégie *Never*.
 ```
 vi never-pod.yml
