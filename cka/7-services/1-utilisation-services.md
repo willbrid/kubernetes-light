@@ -2,7 +2,7 @@
 Les services Kubernetes permettent d'exposer une application s'exécutant en tant qu'ensemble de pods. Ils fournissent aux clients un moyen abstrait d'accéder aux applications sans avoir à connaître les pods de l'application. <br>
 Nous présentons à présent trois exemples d'utilisation de l'objet *service*.<br>
 
-##- service de type *ClusterIP*
+## service de type *ClusterIP*
 Nous créeons un déploiement :
 ```
 vi deployment-svc.yml
@@ -101,7 +101,7 @@ kubectl exec pod-svc-test -- curl svc-clusterip:80
 
 Vous devriez voir la page d'accueil Nginx, qui est servie par l'un des pods backend créés précédemment à l'aide d'un déploiement.<br>
 
-##- service de type *NodePort*
+## service de type *NodePort*
 Nous créeons un service de type *nodePort* permettant d'exposer directement notre déploiement précédent à l'extérieur du cluster :
 ```
 vi svc-nodeport.yml
@@ -129,7 +129,7 @@ kubectl create -f svc-nodeport.yml
 
 L'on pourra tester le service depuis notre navigateur en saisissant l'adresse : *http://< @IP noeud master>:30080* et l'on pourra voir la page d'accueil Nginx.<br>
 
-##- service de type *ClusterIP* avec l'objet Ingress
+## service de type *ClusterIP* avec l'objet Ingress
 Nous gérons l'accès à l'application depuis l'extérieur avec l'objet Ingress. Il s'agit d'exposer notre service de type *ClusterIP* à l'extérieur du cluster.<br>
 Nous créeons notre objet Ingress :
 ```
