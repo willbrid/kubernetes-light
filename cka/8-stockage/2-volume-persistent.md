@@ -28,7 +28,7 @@ kubectl create -f localdisk-sc.yml
 
 L'attribut *allowVolumeExpansion* permettra d'étendre une requête de volume de persistent (PersistentVolumeClaim).
 
-##- volume persistent
+## volume persistent
 Un volume persistent utilise un ensemble d'attributs pour décrire la ressource de stockage sous-jacente (telle qu'un disque ou un emplacement de stockage dans le cloud) qui sera utilisée pour stocker les données.<br>
 Nous créeons un volume persistent qui utilise notre objet StorageClass :
 ```
@@ -72,7 +72,7 @@ L'on peut afficher la liste des volumes persistents :
 kubectl get pv
 ```
 
-##- requête de volume persistent
+## requête de volume persistent
 Nous créeons un objet *PersistentVolumeClaim* qui sera lié à l'objet PersistentVolume :
 ```
 vi test-pvc.yml
