@@ -1,9 +1,9 @@
 # Supervision de la santé d'un pod sur k8s
 Dans ce tutoriel, nous présenterons la supervision de la santé d'un pod.<br>
 
-**- supervision de la santé d'un pod en éxécution**<br>
-Nous pouvons superviser la santé d'un pod en éxécution via l'option *livenessProbe*. 
-- Cette supervision peut se baser sur une commande éxécutée au niveau du conteneur de pod. Nous créeons un pod avec l'option *livenessProbe* basée sur une commande :
+## supervision de la santé d'un pod en éxécution
+Nous pouvons superviser la santé d'un pod en éxécution via l'attribut *spec.containers.livenessProbe*. 
+- Cette supervision peut se baser sur une commande éxécutée au niveau du conteneur de pod. Nous créeons un pod avec l'attribut *spec.containers.livenessProbe* basée sur une commande :
 ```
 vi liveness-cmd-pod.yml
 ```
@@ -29,10 +29,10 @@ spec:
 kubectl create -f liveness-cmd-pod.yml
 ```
 
-L'option *initialDelaySeconds* de *livenessProbe* permet de définir le délai d'attente initiale avant l'éxécution de la commande pour la première fois.<br>
-L'option *periodSeconds* de *livenessProbe* permet de définir l'intervalle de temps régulier d'éxécution de la commande.
+L'attribut *spec.containers.livenessProbe.initialDelaySeconds* permet de définir le délai d'attente initiale avant l'éxécution de la commande pour la première fois.<br>
+L'attribut *spec.containers.livenessProbe.periodSeconds* permet de définir l'intervalle de temps régulier d'éxécution de la commande.
 
-- Cette supervision peut se baser sur une requête http éxécutée au niveau du conteneur de pod. Nous créeons un pod avec l'option *livenessProbe* basée sur une requête http :
+- Cette supervision peut se baser sur une requête http éxécutée au niveau du conteneur de pod. Nous créeons un pod avec l'attribut *spec.containers.livenessProbe* basée sur une requête http :
 ```
 vi liveness-http-pod.yml
 ```
@@ -58,12 +58,12 @@ spec:
 kubectl create -f liveness-http-pod.yml
 ```
 
-L'option *httpGet* de *livenessProbe* permet de définir l'uri (option *path*) et le port (option *port*) définissant le endpoint sur lequel sera exécutée une requête http GET.<br>
+L'attribut *spec.containers.livenessProbe.httpGet* permet de définir l'uri (via son attribut *spec.containers.livenessProbe.httpGet.path*) et le port (via son attribut *spec.containers.livenessProbe.httpGet.port*) définissant le endpoint sur lequel sera exécutée une requête http GET.<br>
 
-Par défaut, K8s ne considérera qu'un conteneur comme étant *hors service* si le processus du conteneur s'arrête. C'est pourquoi L'option *livenessProbe* permet de déterminer automatiquement si une application de conteneur est dans un état sain ou non.
+Par défaut, K8s ne considérera qu'un conteneur comme étant *hors service* si le processus du conteneur s'arrête. C'est pourquoi L'attribut *spec.containers.livenessProbe* permet de déterminer automatiquement si une application de conteneur est dans un état sain ou non.
 
-**- supervision de la santé d'un pod à sa première éxécution**<br>
-Nous créeons un pod avec l'option *startupProbe* basée sur une requête http :
+## supervision de la santé d'un pod à sa première éxécution
+Nous créeons un pod avec l'attribut *spec.containers.startupProbe* basée sur une requête http :
 ```
 vi startup-http-pod.yml
 ```
@@ -89,11 +89,11 @@ spec:
 kubectl create -f startup-http-pod.yml
 ```
 
-L'option *failureThreshold* de *startupProbe* permet de définir le délai d'attente d'échec d'éxécution du pod. La requête du *startupProbe* arrête de séxécuter une fois que le conteneur a été demarré avec succès. <br>
-L'option *startupProbe* est particulièrement utile pour les applications qui peuvent avoir de longs temps de démarrage.
+L'attribut *spec.containers.startupProbe.failureThreshold* permet de définir le délai d'attente d'échec d'éxécution du pod. La requête du *startupProbe* arrête de séxécuter une fois que le conteneur a été demarré avec succès. <br>
+L'attribut *spec.containers.startupProbe* est particulièrement utile pour les applications qui peuvent avoir de longs temps de démarrage.
 
-**- supervision de la santé d'un pod après sa première éxécution**<br>
-Nous créeons un pod avec l'option *readinessProbe* basée sur une requête http :
+## supervision de la santé d'un pod après sa première éxécution
+Nous créeons un pod avec l'attribut *spec.containers.readinessProbe* basée sur une requête http :
 ```
 vi readiness-http-pod.yml
 ```
@@ -119,4 +119,4 @@ spec:
 kubectl create -f readiness-http-pod.yml
 ```
 
-L'on utilise l'option *readinessProbe* principalement pour empêcher le trafic utilisateur d'être envoyé vers des pods qui sont encore en cours de démarrage.
+L'on utilise l'attribut *spec.containers.readinessProbe* principalement pour empêcher le trafic utilisateur d'être envoyé vers des pods qui sont encore en cours de démarrage.
