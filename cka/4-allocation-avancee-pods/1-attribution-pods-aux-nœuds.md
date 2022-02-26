@@ -1,7 +1,7 @@
 # Attribution des pods aux nœuds
-Dans ce tutoriel, nous présenterons deux façons d'attribuer un pod à un noeud : via l'option *nodeSelector* et via l'option *nodeName*.<br>
+Dans ce tutoriel, nous présenterons deux façons d'attribuer un pod à un noeud : via l'attribut *spec.nodeSelector* et via l'attribut *spec.nodeName*.<br>
 
-**- attribution via *nodeSelector***<br>
+## attribution via *nodeSelector*
 Nous listons l'ensemble de nos noeuds du cluster :
 
 ```
@@ -13,7 +13,7 @@ Nous affectons un label à un noeud worker par exemple : *k8s-worker1* .
 kubectl label nodes k8s-worker1 special=true
 ```
 
-Nous créeons un pod en utilisant l'option *nodeSelector* :
+Nous créeons un pod en utilisant l'attribut *spec.nodeSelector* :
 ```
 vi nodeselector-pod.yml
 ```
@@ -40,7 +40,7 @@ Pour vérifier si effectivement ce pod a été déploié sur le noeud *k8s-worke
 kubectl get pod nodeselector-pod -o wide
 ```
 
-**- attribution via *nodeName***<br>
+## attribution via *nodeName*
 Nous listons l'ensemble de nos noeuds du cluster :
 
 ```
@@ -48,7 +48,7 @@ kubectl get nodes
 ```
 
 Nous choisissons un noeud worker par exemple : *k8s-worker2* .<br>
-Nous créeons un pod en utilisant l'option *nodeName* :
+Nous créeons un pod en utilisant l'attribut *spec.nodeName* :
 ```
 vi nodename-pod.yml
 ```
