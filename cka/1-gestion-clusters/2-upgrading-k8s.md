@@ -51,12 +51,17 @@ kubectl get nodes
 ## Mise à jour des noeuds worker
 Nous prendrons l'exemple avec le noeud worker k8s-worker1 et ce qui sera exactement la même procédure sur tous les autres noeuds worker.
 
-**- Evincement du noeud worker**
+**- Evincement du noeud worker sur le noeud master**
 ```
 kubectl drain k8s-worker1 --ignore-daemonsets --force
 ```
 
-**- Mise à jour du package kudeadm**
+**- Connexion par ssh sur le noeud worker**
+```
+ssh k8s-worker1
+```
+
+**- Mise à jour du package kudeadm sur le noeud worker**
 ```
 sudo apt-get update && sudo apt-get install -y --allow-change-held-packages kubeadm=1.22.2-00
 ```
@@ -71,18 +76,18 @@ sudo kubeadm upgrade node
 sudo apt-get update && sudo apt-get install -y --allow-change-held-packages kubelet=1.22.2-00 kubectl=1.22.2-00
 ```
 
-**- Redemarrage du kubelet**
+**- Redemarrage du kubelet sur le noeud worker**
 ```
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet
 ```
 
-**- Remettre le noeud worker à l'état planifiable**
+**- Remettre le noeud worker à l'état planifiable sur le noeud master**
 ```
 kubectl uncordon k8s-worker1 
 ```
 
-**- Vérifier que le cluster a été mis à jour et fonctionne**
+**- Vérifier que le cluster a été mis à jour sur le noeud master**
 ```
 kubectl get nodes
 ```
