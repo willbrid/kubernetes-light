@@ -31,7 +31,7 @@ Cette commande permettra de configurer le hostname k8s-worker2 sur le noeud work
 
 NB: Déconnectez-vous des trois serveurs et reconnectez-vous pour voir ces modifications prendre effet.
 
-**Configuration du fichier hosts**
+**Configuration du fichier hosts**<br>
 Sur tous les nœuds, configurez le fichier hosts pour permettre à tous les nœuds de se joindre à l'aide de ces noms d'hôte.
 ```
 sudo vi /etc/hosts
