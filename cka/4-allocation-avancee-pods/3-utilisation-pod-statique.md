@@ -28,7 +28,7 @@ Pour vérifier la création d'un pod statique, nous pouvons lister les pods afin
 kubectl get pods
 ```
 
-Les pods miroirs respecte une nomenclature précise : *nomPod-nomNoeud*.<br>
+Les pods miroirs respectent une nomenclature précise : *nomPod-nomNoeud*.<br>
 Si vous le souhaitez, vous pouvez tenter de supprimer le pod statique à l'aide de l'api k8s. Le pod sera immédiatement recréé, puisqu'il ne s'agit que d'un pod miroir créé par le kubelet worker pour représenter le pod statique.
 ```
 kubectl delete pod test-static-pod-k8s-worker1
