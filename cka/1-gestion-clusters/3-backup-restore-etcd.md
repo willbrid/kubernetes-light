@@ -51,7 +51,7 @@ sudo ETCDCTL_API=3 etcdctl snapshot restore $HOME/etcd_backup.db \
 --data-dir /var/lib/etcd-backup
 ```
 
-L'option *--data-dir* permet de préciser le répertoire de restauration.<br> Les fichiers restaurés sont situés dans le nouveau dossier */var/lib/etcd-backup*, maintenant nous devons dire à l'etcd d'utiliser ce répertoire en modifiant le volume *hostPath* des données de l'etcd :
+L'option *--data-dir* permet de préciser le répertoire de restauration.<br> Les fichiers restaurés sont situés dans le nouveau dossier */var/lib/etcd-backup*, maintenant nous devons dire à l'etcd d'utiliser ce répertoire en modifiant l'attribut *path* du volume *hostPath* des données de l'etcd :
 ```
 vi /etc/kubernetes/etcd.yaml
 ```
@@ -63,8 +63,8 @@ spec:
   volumes:
   ...
   - hostPath:
-    path: /var/lib/etcd-backup
-    type: DirectoryOrCreate
+      path: /var/lib/etcd-backup  # mettre à jour le path
+      type: DirectoryOrCreate
     name: etcd-data
 ...
 ```
