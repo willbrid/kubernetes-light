@@ -24,11 +24,7 @@ sudo firewall-cmd --reload
 
 ## Ajout de la source Prometheus à Grafana
 - Nous cliquons sur l'option "ajouter une source" sur la page d'accueil de Grafana.
-- Nous ajoutons le nom de la source, les détails du point de terminaison Prometheus et enregistrons-le.
-- Nous sélectionnons l'option de création de tableau de bord.
-- Nous sélectionnons le type de graphique. Nous pourrons sélectionner le type en fonction du type de visualisation et de tableau de bord dont nous avons besoin.
-- Nous sélectionnons l'option d'édition en haut du panneau.
-- Nous sélectionnons la source de données Prometheus et entrons l'expression Prometheus qui doit être représentée graphiquement sous l'onglet des métriques. Nous pouvons prévisualiser le graphique à l'aide du bouton de prévisualisation. Sous l'onglet général, nous pouvons attribuer un nom au tableau de bord. Nous enregistrons le tableau de bord après l'aperçu.
+- Nous ajoutons le nom de la source, les détails du endpoint prometheus et nous l'enregistrons.
 
 ## Importation de modèles de tableau de bord Grafana prédéfinis
 Nous pouvons trouver tous les tableaux de bord communautaires partagés à partir des [modèles partagés Grafana](https://grafana.com/dashboards?dataSource=prometheus)
