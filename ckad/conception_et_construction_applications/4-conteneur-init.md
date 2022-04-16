@@ -31,7 +31,7 @@ kubectl apply -f init-test.yml
 kubectl get pod init-test
 ```
 
-- Nous attendons environ 60 secondes que le conteneur d'initialisation se termine, puis vérifiez à nouveau l'état.
+- Nous attendons environ 60 secondes que le conteneur d'initialisation se termine, puis nous vérifions à nouveau l'état.
 ```
 kubectl get pod init-test
 ```
