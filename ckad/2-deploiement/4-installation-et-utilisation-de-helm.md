@@ -49,7 +49,7 @@ Nous créeons un namespace *dokuwiki* dans lequel nous installerons notre chart 
 kubectl create namespace dokuwiki
 ```
 
-Nous installons le chart *dokuwiki* dans le namepsace dokuwiki :
+Nous installons le chart *dokuwiki* dans le namepsace *dokuwiki* :
 ```
 helm install --set persistence.enabled=false -n dokuwiki dokuwiki bitnami/dokuwiki
 ```
@@ -61,7 +61,7 @@ kubectl get deployments -n dokuwiki
 kubectl get svc -n dokuwiki
 ```
 
-Nous pouvons d'installer et supprimer le chart installé *dokuwiki* et supprimer le namespace *dokuwiki* :
+Nous pouvons installer et supprimer le chart installé *dokuwiki* et supprimer le namespace *dokuwiki* :
 ```
 helm uninstall -n dokuwiki dokuwiki
 kubectl delete namespace dokuwiki
