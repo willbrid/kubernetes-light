@@ -98,7 +98,7 @@ spec:
 kubectl apply -f np-test-client-allow-egress.yml
 ```
 
-Vérifions le journal du pod client. Le trafic devrait être à nouveau autorisée.
+Vérifions le journal du pod client. Le trafic devrait être à nouveau autorisé.
 ```
 kubectl logs client-pod -n np-test-b
 ```
