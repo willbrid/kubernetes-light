@@ -1,4 +1,4 @@
-# Contrôler l'accès au réseau avec NetworkPolicies
+# Partie 1 : contrôler l'accès au réseau avec NetworkPolicies
 Si un pod n'est sélectionné par aucune stratégie réseau (*NetworkPolicy*), le pod n'est pas isolé et tout le trafic est autorisé.<br>
 Si un pod est sélectionné par une stratégie réseau (*NetworkPolicy*), le trafic sera bloqué à moins qu'il ne soit autorisé par au moins une stratégie réseau (*NetworkPolicy*) qui sélectionne le pod.<br>
 Si vous combinez un *namespaceSelector* et un *podSelector* dans la même règle, le trafic doit remplir à la fois les conditions liées au pod et à l'espace de noms pour être autorisé.<br>
