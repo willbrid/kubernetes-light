@@ -57,7 +57,7 @@ Nous pouvons lister les ressources crd :
 kubectl get crd
 ```
 
-- Créeons un objet en utilisant votre nouveau CRD <br>
+- Créeons un objet en utilisant notre nouveau CRD <br>
 ```
 vi test-beehive.yml
 ```
