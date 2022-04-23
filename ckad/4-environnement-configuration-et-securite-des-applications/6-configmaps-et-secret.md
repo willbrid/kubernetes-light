@@ -126,10 +126,10 @@ spec:
   volumes:
   - name: secret-config
     secret:
-    secretName: my-secret
-    items:
-    - key: passwords.txt
-      path: passwords.txt
+      secretName: my-secret
+      items:
+      - key: passwords.txt
+        path: passwords.txt
 ```
 
 ```
