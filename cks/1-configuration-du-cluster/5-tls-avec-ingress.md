@@ -65,7 +65,7 @@ spec:
 kubectl create -f ingresstest-nginx-svc.yml
 ```
 
-Testons votre configuration sur le nœud du plan de contrôle
+Testons notre configuration sur le nœud du plan de contrôle
 ```
 kubectl get svc -n ingresstest
 ```
