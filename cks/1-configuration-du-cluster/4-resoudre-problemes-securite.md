@@ -1,9 +1,10 @@
 # Résoudre les problèmes de sécurité détectés par un benchmark CIS
-La sortie CIS Benchmark comprend des étapes de correction que vous pouvez utiliser pour résoudre les problèmes.<br>
+La sortie CIS Benchmark comprend des étapes de correction que nous pouvons utiliser pour résoudre les problèmes.<br>
 Les clusters kubeadm utilisent un fichier de configuration kubelet situé dans */var/lib/kubelet/config.yaml* sur chaque nœud.<br>
 Dans un cluster kubeadm, les fichiers manifestes des composants du plan de contrôle se trouvent dans */etc/kubernetes/manifests* sur le serveur du plan de contrôle.<br>
 
 - Corrigeons un problème de sécurité du plan de contrôle<br>
+
 Nous affichons les résultats de *kube-bench* pour le plan de contrôle (ces résultats ont été générés dans l'astuce précédente (3-cis-benchmark)).
 ```
 cat kube-bench-results-control-plane.log
@@ -29,8 +30,10 @@ spec:
 Les modifications apportées à ce ﬁchier seront récupérées automatiquement. Cela peut prendre quelques instants pour que le nouveau *kube-controller-manager* démarre.<br><br>
 
 - Corrigeons un problème de sécurité des noeuds worker<br>
+
 Créeons un problème de sécurité sur les nœuds worker qui sera détecté par le benchmark CIS et vérifions comment les résultats du benchmark répondent.<br>
-Connectons-nous à nos deux noeuds et procédons comme suit :<br>
+Connectons-nous à nos deux noeuds et procédons comme suit :
+<br>
 --- modifions le fichier de configuration de kubelet.
 ```
 sudo vi /var/lib/kubelet/config.yaml
