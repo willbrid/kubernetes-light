@@ -32,16 +32,14 @@ Vérifions l'état des jobs et attendons qu'ils soient tous les deux terminés (
 kubectl get pods
 ```
 
-- Enregistrons les journaux des Job Pods pour visualiser facilement les résultats. Assurons-nous de fournir les noms réels des pods. Dans notre cas on aura :
+- Enregistrons les journaux des Job Pods pour visualiser facilement les résultats. Assurons-nous de fournir les noms réels des pods :
 ```
-kubectl logs k8s-control > kube-bench-results-control-plane.log
-kubectl logs k8s-worker1 > kube-bench-results-node1.log
-kubectl logs k8s-worker2 > kube-bench-results-node2.log
+kubectl logs <Control Plane Job Pod name> > kube-bench-results-control-plane.log
+kubectl logs <Node Job Pod name> > kube-bench-results-node.log
 ```
 
 Nous consultons les résultats des tests kube-bench.
 ```
 cat kube-bench-results-control-plane.log
-cat kube-bench-results-node1.log
-cat kube-bench-results-node2.log
+cat kube-bench-results-node.log
 ```
