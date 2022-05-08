@@ -26,8 +26,9 @@ kubectl describe role shared-sa-role -n sa-permissions-test
 
 Notons qu'un seul des deux pods doit pouvoir afficher les déploiements, et l'autre doit uniquement afficher les pods.
 Ni l'un ni l'autre n'a besoin d'autorisation pour afficher les secrets.
-Nous rendrons cette configuration plus sécurisée en séparant les autorisations des pods dans des comptes de service distincts, chacun avec uniquement les autorisations nécessaires pour chaque pod.
-Créeons une nouvelle configuration ServiceAccount et RBAC pour le pod deployment-viewer-pod.
+Nous rendrons cette configuration plus sécurisée en séparant les autorisations des pods dans des comptes de service distincts, chacun avec uniquement les autorisations nécessaires pour chaque pod.<br>
+
+- Créeons une nouvelle configuration ServiceAccount et RBAC pour le pod deployment-viewer-pod.
 ```
 vi deployment-viewer-pod-sa-rbac.yml
 ```
@@ -111,7 +112,7 @@ roleRef:
 kubectl create -f pod-viewer-pod-sa-rbac.yml
 ```
 
-Nous modifions le manifeste du pod *deployment-viewer-pod* pour définir le nouveau ServiceAccount.
+- Nous modifions le manifeste du pod *deployment-viewer-pod* pour définir le nouveau ServiceAccount.
 ```
 vi new-deployment-viewer-pod.yml
 ```
