@@ -5,7 +5,7 @@ Nous pouvons configurer la journalisation d'audit en transmettant des indicateur
 • --audit-log-maxage : Le nombre de jours de conservation des anciens fichiers journaux.<br>
 • --audit-log-maxbackup : Le nombre d'anciens fichiers journaux à conserver.<br><br>
 
-Le fichier de configuration de la stratégie d'audit définit les règles d'audit. L'emplacement du fichier est déterminé par l'indicateur --audit-policy-file transmis à kube-apiserver.<br><br>
+Le fichier de configuration de la stratégie d'audit définit les règles d'audit. L'emplacement du fichier est déterminé par l'indicateur *--audit-policy-file* transmis à kube-apiserver.<br><br>
 
 Créeons un fichier de configuration de stratégie d'audit :
 ```
