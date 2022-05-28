@@ -5,7 +5,7 @@ Les Benchmarks CIS sont un ensemble de normes communautaires et de bonnes pratiq
 Le CIS Kubernetes Benchmark fournit une ligne directrice pour la sécurisation des environnements Kubernetes.<br>
 *kube-bench* est un outil qui vérifie votre cluster pour voir dans quelle mesure il est conforme au CIS Kubernetes Benchmark. Il vérifie automatiquement votre cluster pour voir s'il est conforme aux normes CIS Kubernetes Benchmark et génère un rapport.<br>
 
-- Téléchargez les fichiers YAML du job kube-bench
+- Téléchargeons les fichiers YAML du job kube-bench
 ```
 wget -O kube-bench-control-plane.yaml https://raw.githubusercontent.com/aquasecurity/kube-bench/main/job-master.yaml
 
