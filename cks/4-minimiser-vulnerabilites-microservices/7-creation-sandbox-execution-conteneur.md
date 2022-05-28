@@ -22,6 +22,12 @@ Modifions la configuration du *containerd* et ajoutons la configuration pour *ru
 sudo vi /etc/containerd/config.toml
 ```
 
+Si le repertoire */etc/containerd/* n'existe pas, alors nous pouvons faire :
+```
+sudo mkdir -p /etc/containerd
+sudo containerd config default > /etc/containerd/config.toml
+```
+
 Trouvons la section *disabled_plugins* et ajoutons le plugin de redémarrage.
 ```
 disabled_plugins = ["io.containerd.internal.v1.restart"]
