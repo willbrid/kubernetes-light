@@ -7,8 +7,7 @@ Le CIS Kubernetes Benchmark fournit une ligne directrice pour la sécurisation d
 
 - Téléchargez les fichiers YAML du job kube-bench
 ```
-wget -O kube-bench-control-plane.yaml https://raw.githubusercontent.com/aquasecurity/kube-bench/main/job-
-master.yaml
+wget -O kube-bench-control-plane.yaml https://raw.githubusercontent.com/aquasecurity/kube-bench/main/job-master.yaml
 
 wget -O kube-bench-node.yaml https://raw.githubusercontent.com/aquasecurity/kube-bench/main/job-node.yaml
 ```
