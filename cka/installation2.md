@@ -149,7 +149,7 @@ Cette configuration de parefeu est basée sur la liste de ports par défaut des 
 # Installation du cluster k8s
 **Ajout du repo k8s sur tous les noeuds**
 ```
-sudo /etc/yum.repos.d/kubernetes.repo
+sudo vi /etc/yum.repos.d/kubernetes.repo
 ```
 
 ```
