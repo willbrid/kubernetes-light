@@ -25,7 +25,7 @@ sudo vi /etc/containerd/config.toml
 Si le repertoire */etc/containerd/* n'existe pas, alors nous pouvons faire :
 ```
 sudo mkdir -p /etc/containerd
-sudo containerd config default > /etc/containerd/config.toml
+sudo containerd config default | sudo tee /etc/containerd/config.toml
 ```
 
 Trouvons la section *disabled_plugins* et ajoutons le plugin de redémarrage.
