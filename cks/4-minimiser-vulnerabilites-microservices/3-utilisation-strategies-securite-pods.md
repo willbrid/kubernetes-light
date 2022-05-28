@@ -15,7 +15,7 @@ Chaque nouveau pod doit être autorisé par au moins une stratégie que l'utilis
 Les politiques d'autorisation :
 - User : <br>
 -- l'utilisateur qui crée le pod a accès à la stratégie. <br>
--- contrôlons quels utilisateurs peuvent créer des pods en fonction de quelles politiques. <br>
+-- contrôle quels utilisateurs peuvent créer des pods en fonction de quelles politiques. <br>
 -- ne fonctionne pas bien pour les pods qui ne sont pas créés directement par les utilisateurs (pensons aux déploiements, aux ReplicaSets, aux DaemonSets, etc.).<br>
 
 - ServiceAccount : <br>
@@ -48,7 +48,7 @@ vi psp-nonpriv.yml
 apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
-name: psp-nonpriv
+  name: psp-nonpriv
 spec:
   privileged: false
   runAsUser:
