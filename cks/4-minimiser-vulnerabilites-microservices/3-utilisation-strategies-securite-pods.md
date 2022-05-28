@@ -13,14 +13,14 @@ Le verbe *use* dans un Role ou un ClusterRole permet à un utilisateur d'utilise
 Chaque nouveau pod doit être autorisé par au moins une stratégie que l'utilisateur est autorisé à utiliser. Si l'utilisateur n'est autorisé à utiliser aucune politique, il ne peut pas créer de pod !<br>
 
 Les politiques d'autorisation :
-- User :
--- l'utilisateur qui crée le pod a accès à la stratégie.
--- contrôlons quels utilisateurs peuvent créer des pods en fonction de quelles politiques.
+- User : <br>
+-- l'utilisateur qui crée le pod a accès à la stratégie. <br>
+-- contrôlons quels utilisateurs peuvent créer des pods en fonction de quelles politiques. <br>
 -- ne fonctionne pas bien pour les pods qui ne sont pas créés directement par les utilisateurs (pensons aux déploiements, aux ReplicaSets, aux DaemonSets, etc.).<br>
 
-- ServiceAccount :
--- le compte de service du pod a accès pour utiliser la stratégie.
--- fonctionne avec des pods créés indirectement, tels que ceux créés à l'aide de déploiements, etc.
+- ServiceAccount : <br>
+-- le compte de service du pod a accès pour utiliser la stratégie. <br>
+-- fonctionne avec des pods créés indirectement, tels que ceux créés à l'aide de déploiements, etc. <br>
 -- c'est la méthode préférée dans la plupart des cas : ainsi pour appliquer une *PodSecurityPolicy* dans le contexte d'un espace de noms spécifique, autorisons un ServiceAccount dans cet espace de noms à utiliser la stratégie.<br>
 
 ## Activons le contrôleur d'admission PodSecurityPolicy
