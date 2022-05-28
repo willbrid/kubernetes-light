@@ -138,7 +138,7 @@ spec:
           service:
             name: ingresstest-nginx-svc
             port:
-            number: 80
+              number: 80
 ```
 
 ```
