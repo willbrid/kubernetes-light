@@ -14,7 +14,7 @@ vi security-context-pod.yml
 apiVersion: v1
 kind: Pod
 metadata:
-name: security-context-pod
+  name: security-context-pod
 spec:
   securityContext:
     runAsUser: 1000
