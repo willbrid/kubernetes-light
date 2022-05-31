@@ -2,17 +2,13 @@
 Nous pouvons effectuer une analyse statique sur les ressources Kubernetes. Pour ce faire, nous pouvons notamment examiner les fichiers manifestes YAML utilisés pour créer des ressources dans notre cluster.<br>
 
 Quelques éléments à rechercher :
-- Espaces de noms d'hôte
-Si possible, ne laissons pas les conteneurs utiliser des espaces de noms d'hôte. Autrement dit dans la mesure du possible, évitons d'utiliser des espaces de noms d'hôte dans nos configurations de pod (c'est-à-dire avec *hostNetwork : true*, *hostIPC : true* ou *hostPID : true*).
+- Espaces de noms d'hôte : si possible, ne laissons pas les conteneurs utiliser des espaces de noms d'hôte. Autrement dit dans la mesure du possible, évitons d'utiliser des espaces de noms d'hôte dans nos configurations de pod (c'est-à-dire avec *hostNetwork : true*, *hostIPC : true* ou *hostPID : true*).
 
-- Mode privilégié
-Évitons d'utiliser le mode privilégié (c'est à dire *privileged: true*) pour les conteneurs, sauf en cas d'absolue nécessité.
+- Mode privilégié : évitons d'utiliser le mode privilégié (c'est à dire *privileged: true*) pour les conteneurs, sauf en cas d'absolue nécessité.
 
-- Tag *:latest*
-Utilisons des tag fixes spécifiques pour référencer les images au lieu de tag non fixes telles que le tag *:latest*. Cela évite de télécharger automatiquement de nouvelles images potentiellement non vérifiées.
+- Tag *:latest* : utilisons des tag fixes spécifiques pour référencer les images au lieu de tag non fixes telles que le tag *:latest*. Cela évite de télécharger automatiquement de nouvelles images potentiellement non vérifiées.
 
-- Exécuter en tant que root
-Évitons d'exécuter en tant qu'utilisateur *root* ou *0* (c'est à dire via *securityContext.runAsUser*).<br>
+- Exécuter en tant que root : évitons d'exécuter en tant qu'utilisateur *root* ou *0* (c'est à dire via *securityContext.runAsUser*).<br>
 
 Exemple de fichier yaml potentiellement vulnérable de déploiment
 ```
