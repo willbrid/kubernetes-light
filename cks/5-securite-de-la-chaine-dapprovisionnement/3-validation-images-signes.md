@@ -1,6 +1,5 @@
 # Validation des images signées
-- Signatures d'images
-Les images de conteneur peuvent être signées à l'aide d'un hachage généré à partir du contenu unique de l'image. Les signatures peuvent être utilisées pour vérifier que le contenu de l'image n'a pas été falsifié.
+- Signatures d'images : les images de conteneur peuvent être signées à l'aide d'un hachage généré à partir du contenu unique de l'image. Les signatures peuvent être utilisées pour vérifier que le contenu de l'image n'a pas été falsifié.
 - Nous pouvons fournir un hachage SHA-256 pour valider une image.
 - Ainsi pour valider l'image, nous pouvons ajouter le hachage à la référence de l'image dans la spécification de notre conteneur avec image : *imageName:tag@sha256:hash*.
 - Si l'image échoue à la validation, le pod sera créé, mais le nœud ne parviendra pas à télécharger l'image.
