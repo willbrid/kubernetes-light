@@ -1,6 +1,6 @@
 # Présentation des journaux d'audit
 Que sont les journaux d'audit ?
-Les journaux d'audit sont un enregistrement chronologique des actions effectuées via l'API Kubernetes. Ils sont utiles pour voir ce qui se passe dans votre cluster en temps réel (c'est-à-dire la détection des menaces) ou pour examiner ce qui s'est passé dans le cluster après coup (c'est-à-dire l'analyse post-mortem).<br>
+Les journaux d'audit sont un enregistrement chronologique des actions effectuées via l'API Kubernetes. Ils sont utiles pour voir ce qui se passe dans notre cluster en temps réel (c'est-à-dire la détection des menaces) ou pour examiner ce qui s'est passé dans le cluster après coup (c'est-à-dire l'analyse post-mortem).<br>
 
 Exemple d'objet *Policy* :
 ```
