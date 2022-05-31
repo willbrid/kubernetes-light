@@ -3,12 +3,9 @@ Une sandboxe d'exécution de conteneur est un environnement d'exécution de cont
 
 Utilisons des sandboxes d'exécution de conteneur dans les situations où nous avons besoin d'une sécurité supplémentaire autour des conteneurs :
 
-- CHARGES DE TRAVAIL NON FIABLES
-Si nous avons absolument besoin d'exécuter des applications auxquelles nous ne faisons pas nécessairement confiance ou dont nous ne pouvons pas vérifier l'origine.
-- MULTI-LOCATION
-Si nous avons des utilisateurs ou des clients externes qui ont la possibilité d'exécuter des charges de travail dans votre cluster.
-- PETIT ET SIMPLE
-Les charges de travail qui n'ont pas besoin d'un accès direct à l'hôte et qui ne se soucient pas des compromis en matière de performances.
+- CHARGES DE TRAVAIL NON FIABLES : si nous avons absolument besoin d'exécuter des applications auxquelles nous ne faisons pas nécessairement confiance ou dont nous ne pouvons pas vérifier l'origine.
+- MULTI-LOCATION : si nous avons des utilisateurs ou des clients externes qui ont la possibilité d'exécuter des charges de travail dans votre cluster.
+- PETIT ET SIMPLE : les charges de travail qui n'ont pas besoin d'un accès direct à l'hôte et qui ne se soucient pas des compromis en matière de performances.
 
 La sécurité supplémentaire d'une sandboxe d'exécution de conteneur se fait généralement au détriment des performances.
 
