@@ -1,9 +1,7 @@
 # Registres d'images autorisés
-- Registres d'images
-Un registre d'images est un service qui stocke des images de conteneurs et les propose en téléchargement. Lorsque nous exécutons un conteneur dans Kubernetes, le nœud télécharge automatiquement l'image à partir d'un registre.
+- Registres d'images : c'est un service qui stocke des images de conteneurs et les propose en téléchargement. Lorsque nous exécutons un conteneur dans Kubernetes, le nœud télécharge automatiquement l'image à partir d'un registre.
 
-- Restreindre les registres autorisés
-Une façon d'empêcher les téléchargements à partir de registres non approuvés consiste à restreindre les registres pouvant être utilisés dans le cluster. Ce qui permettra de limiter les utilisateurs aux seuls registres d'images fiables afin de les empêcher d'exécuter des images provenant de sources non fiables dans le cluster. Une façon de le faire est d'utiliser OPA Gatekeeper.
+- Restreindre les registres autorisés : une façon d'empêcher les téléchargements à partir de registres non approuvés consiste à restreindre les registres pouvant être utilisés dans le cluster. Ce qui permettra de limiter les utilisateurs aux seuls registres d'images fiables afin de les empêcher d'exécuter des images provenant de sources non fiables dans le cluster. Une façon de le faire est d'utiliser OPA Gatekeeper.
 
 - Créeons un objet *ConstraintTemplate* qui nous permet de mettre en liste blanche les registres autorisés :
 ```
