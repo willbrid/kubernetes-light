@@ -5,17 +5,13 @@ Une façon de renforcer la sécurité de nos images est d'analyser les Dockerfil
 
 Quelques éléments à rechercher :
 
-- USER ROOT
-Si la directive *USER* finale dans le Dockerfile est définie sur *root*, le processus de conteneur s'exécutera en tant que *root*. Donc pour éviter d'exécuter le conteneur en tant qu'utilisateur root, assurons-nous que la dernière directive USER dans le Dockerfile n'est pas définie sur *root* ou *0* . C'est généralement une bonne idée d'éviter cela.
+- USER ROOT : si la directive *USER* finale dans le Dockerfile est définie sur *root*, le processus de conteneur s'exécutera en tant que *root*. Donc pour éviter d'exécuter le conteneur en tant qu'utilisateur root, assurons-nous que la dernière directive USER dans le Dockerfile n'est pas définie sur *root* ou *0* . C'est généralement une bonne idée d'éviter cela.
 
-- tag *:latest*
-Essayons d'éviter d'utiliser le tag *:latest* dans la directive *FROM* de notre Dockerfile. Au lieu de cela, faisons référence à une version de tag spécifique.
+- tag *:latest* : essayons d'éviter d'utiliser le tag *:latest* dans la directive *FROM* de notre Dockerfile. Au lieu de cela, faisons référence à une version de tag spécifique.
 
-- Logiciels inutiles
-Assurons-nous que Dockerfile n'installe pas de logiciels ou d'outils inutiles dans l'image finale.
+- Logiciels inutiles : assurons-nous que Dockerfile n'installe pas de logiciels ou d'outils inutiles dans l'image finale.
 
-- Données sensibles
-Vérifions qu'aucune donnée sensible telle que des mots de passe ou des clés d'API n'est stockée dans l'image. Utilisons plutôt les secrets Kubernetes pour transmettre des données sensibles au conteneur lors de l'exécution.
+- Données sensibles : vérifions qu'aucune donnée sensible telle que des mots de passe ou des clés d'API n'est stockée dans l'image. Utilisons plutôt les secrets Kubernetes pour transmettre des données sensibles au conteneur lors de l'exécution.
 
 Exemple d'un Dockerfile potentiellement vulnérable à corriger :
 ```
