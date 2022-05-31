@@ -1,6 +1,5 @@
 # Analyse d'images avec un contrôleur d'admission
-- Contrôleurs d'admission
-Les contrôleurs d'admission interceptent les requêtes adressées à l'API Kubernetes. Ils peuvent approuver, refuser ou modifier la demande avant que les modifications ne soient réellement apportées.<br>
+- Contrôleurs d'admission : ils interceptent les requêtes adressées à l'API Kubernetes. Ils peuvent approuver, refuser ou modifier la demande avant que les modifications ne soient réellement apportées.<br>
 
 - Le contrôleur *ImagePolicyWebhook* envoie une demande à un webhook externe contenant des informations sur l'image utilisée. Il nous permet d'utiliser une logique personnalisable pour approuver ou refuser la création de charges de travail en fonction de l'image de conteneur utilisée.<br>
 Le webhook peut approuver ou refuser la création de la charge de travail basée sur l'image.<br>
