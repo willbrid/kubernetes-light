@@ -83,7 +83,8 @@ kubectl logs -n nptest client
 ```
 
 - Nous créeons une stratégie de réseau de refus par défaut
-En créeant une NetworkPolicy de refus par défaut. Cela bloquera l'accès réseau au pod serveur.
+
+En créeant une NetworkPolicy de refus par défaut, cela bloquera l'accès réseau au pod serveur.
 
 ```
 vi default-deny-all-np.yml
