@@ -27,7 +27,9 @@ spec:
   ...
 ```
 
-Les modifications apportées à ce ﬁchier seront récupérées automatiquement. Cela peut prendre quelques instants pour que le nouveau *kube-controller-manager* démarre.<br><br>
+Les modifications apportées à ce ﬁchier seront récupérées automatiquement. Cela peut prendre quelques instants pour que le nouveau *kube-controller-manager* démarre. On pourra aussi redemarrer le composant *kubelet* sur le noeud master k8s-control.
+
+<br><br>
 
 - Corrigeons un problème de sécurité des noeuds worker<br>
 
