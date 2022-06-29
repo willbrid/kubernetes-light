@@ -39,7 +39,7 @@ Connectons-nous à nos deux noeuds et procédons comme suit :
 sudo vi /var/lib/kubelet/config.yaml
 ```
 
---- Définissons *authentication.webhook.enabled* sur *false* et *authentication.mode* sur *AlwaysAllow* .
+--- Définissons *authentication.webhook.enabled* sur *false* et *authorization.mode* sur *AlwaysAllow* .
 ```
 authentication:
   webhook:
@@ -76,7 +76,7 @@ Recherchons les résultats de la vérification 4.2.2 dans le rapport.
 sudo vi /var/lib/kubelet/config.yaml
 ```
 
-Définissons *authentication.webhook.enabled* sur *true* et *authentication.mode* sur *Webhook* .
+Définissons *authentication.webhook.enabled* sur *true* et *authorization.mode* sur *Webhook* .
 ```
 authentication:
   webhook:
