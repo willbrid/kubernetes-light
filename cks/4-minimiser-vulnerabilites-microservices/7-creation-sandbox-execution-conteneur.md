@@ -1,10 +1,7 @@
 # Création d'une sandboxe d'exécution de conteneur
-- Installer gVisor Runtime
-La première étape consiste à installer l'environnement d'exécution du conteneur qui exécutera les charges de travail en sandboxe.
-- Configurer le conteneur
-Ensuite, nous devons configurer *containerd* pour pouvoir interagir avec *runsc*.
-- Créer une *RuntimeClass*
-Nous devons configurer une *RuntimeClass*, qui nous permettra de désigner les pods qui doivent utiliser le runtime en sandboxe.
+- Installer gVisor Runtime : la première étape consiste à installer l'environnement d'exécution du conteneur qui exécutera les charges de travail en sandboxe.
+- Configurer le conteneur : ensuite, nous devons configurer *containerd* pour pouvoir interagir avec *runsc*.
+- Créer une *RuntimeClass* : nous devons configurer une *RuntimeClass*, qui nous permettra de désigner les pods qui doivent utiliser le runtime en sandboxe.
 
 ## Installer et configurer gVisor
 Sur les trois nœuds (plan de contrôle et nœuds worker), installons gVisor.
