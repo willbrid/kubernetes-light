@@ -1,9 +1,11 @@
 # Utilisation des stratégies de sécurité des pods
-Pour utiliser les politiques de sécurité Pod, nous devons d'abord activer le contrôleur d'admission *PodSecurityPolicy*.<br>
-• Activons le contrôleur d'admission *PodSecurityPolicy* en l'ajoutant à l'indicateur *--enable-admission-plugins* pour le serveur d'API Kubernetes.
+Pour utiliser les politiques de sécurité de Pod, nous devons d'abord activer le contrôleur d'admission *PodSecurityPolicy*.
+
+• Activons le contrôleur d'admission *PodSecurityPolicy* en l'ajoutant à l'indicateur *--enable-admission-plugins* sur le composant kube-apiserver.
 • Un Pod doit satisfaire au moins une *PodSecurityPolicy* pour être autorisé. Si nous activons le contrôleur d'admission avant de créer des règles, aucun pod ne sera autorisé !<br>
 
 Un objet PodSecurityPolicy peut être créé à partir de YAML comme n'importe quel objet Kubernetes.
+
 - *privileged* : détermine si les pods créés à l'aide de la stratégie peuvent exécuter des conteneurs en mode privilégié.
 - *runAsUser* : détermine sous quel(s) utilisateur(s) les conteneurs du pod peuvent s'exécuter. *RunAsAny* permet aux conteneurs de s'exécuter comme n'importe quel utilisateur.
 - Consultons la documentation pour plus d'informations sur les paramètres que les stratégies de sécurité des pods peuvent contrôler <br>
