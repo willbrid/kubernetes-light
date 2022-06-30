@@ -195,7 +195,7 @@ kubectl create -f pod-psp-test-priv.yml
 Cela devrait échouer, car le pod ne répond aux exigences d'aucune *PodSecurityPolicy* applicable.
 
 ## Désactiver le contrôleur d'admission PodSecurityPolicy
-Si nous souhaitons continuer à travailler avec votre cluster sans nous soucier des politiques de sécurité du pod, désactivons le contrôleur d'admission *PodSecurityPolicy*.
+Si nous souhaitons continuer à travailler avec notre cluster sans nous soucier des politiques de sécurité du pod, désactivons le contrôleur d'admission *PodSecurityPolicy*.
 <br>
 Modifions le manifeste du serveur d'API Kubernetes en recherchant la ligne qui commence par *--enable-admission-plugins* et en enlevant *PodSecurityPolicy* à la liste.
 ```
