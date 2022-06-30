@@ -9,7 +9,7 @@ Les secrets stockent et gèrent les données sensibles telles que les mots de pa
 - volumes - Définit un volume k8s qui fait référence au Secret avec *secret.secretName*.
 - *containers[].volumeMounts* - Monte le volume à un emplacement spécifique dans le conteneur.
 
-Si nous avons besoin de récupérer des données secrètes à partir de la ligne de commande, vous pouvez le faire : <br>
+Si nous avons besoin de récupérer des données secrètes à partir de la ligne de commande, nous pouvons le faire : <br>
 • Utilisons *kubectl get -o yaml \<secret\>* pour obtenir les données secrètes encodées en base64 <br>
 • Transmettez les données encodées en base64 à *base64 --decode*.
 
