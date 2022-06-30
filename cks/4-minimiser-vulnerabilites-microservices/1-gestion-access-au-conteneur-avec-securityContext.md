@@ -1,6 +1,5 @@
 # Gestion de l'accès au conteneur avec des contextes de sécurité
-Un contexte de sécurité est une partie de la spécification du pod et du conteneur qui vous permet de fournir des paramètres de sécurité et de contrôle d'accès spéciaux au niveau du pod et du conteneur.<br>
-*securityContext* offre une variété de paramètres liés à la sécurité et au contrôle d'accès.<br>
+Un contexte de sécurité est une partie de la spécification du pod ou du conteneur qui nous permet de fournir des paramètres de sécurité et de contrôle d'accès spéciaux au niveau du pod ou du conteneur. *securityContext* offre une variété de paramètres liés à la sécurité et au contrôle d'accès.<br>
 
 - *spec.securityContext* : configure le contexte de sécurité au niveau du pod. Ces paramètres s'appliquent à tous les conteneurs du pod.<br>
 - *spec.containers[].securityContext* : Définit les paramètres du contexte de sécurité au niveau du conteneur. Ces paramètres s'appliquent aux conteneurs individuels du pod.<br>
