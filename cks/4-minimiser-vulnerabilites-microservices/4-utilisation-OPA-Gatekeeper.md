@@ -1,7 +1,6 @@
 # Utilisation de OPA Gatekeeper
 Qu'est-ce qu'OPA Gatekeeper ?<br>
-Open Policy Agent (OPA) Gatekeeper nous permet d'appliquer des politiques hautement personnalisables sur tout type d'objet k8s au moment de la création.<br>
-Les politiques sont définies à l'aide de l'*OPA Constraint Framework*.<br>
+Open Policy Agent (OPA) Gatekeeper nous permet d'appliquer des politiques hautement personnalisables sur tout type d'objet k8s au moment de sa création. Les politiques sont définies à l'aide de l'*OPA Constraint Framework*.<br>
 
 Avec OPA Gatekeeper, nous pouvons contrôler des choses comme :
 - référentiel d'image : Les images doivent provenir uniquement de certains référentiels pré-approuvés.
@@ -15,7 +14,7 @@ Une contrainte attache la logique dans un modèle de contrainte aux objets k8s e
 Un modèle de contrainte crée un nouveau type d'objet k8s que nous pouvons utiliser pour créer des objets de contrainte.<br>
 Les objets de contrainte appliquent un modèle de contrainte à un groupe spécifique d'objets entrants potentiels, ainsi que des paramètres spécifiques.<br>
 
-*match* détermine à quel(s) nouvel(s) objet(s) la contrainte s'appliquera.
+*match* détermine à quel(s) nouvel(s) objet(s) la contrainte s'appliquera. <br>
 *parameters* est transmis au modèle de contrainte.
 
 ## Installer OPA Gatekeeper sur le cluster
