@@ -5,11 +5,11 @@ Cela nous permet d'appliquer certaines configurations de manière transparente p
 
 Les politiques de sécurité des pods peuvent contrôler des choses comme :
 
-- Mode privilégié : Autoriser ou interdire l'exécution conteneurs en mode privilégié.
-- Espaces de noms d'hôte : Bloquez les paramètres d'espace de noms d'hôte tels que *hostNetwork=true*.
+- Mode privilégié : autoriser ou interdire l'exécution de conteneurs en mode privilégié.
+- Espaces de noms d'hôte : bloquer les paramètres d'espace de noms d'hôte tels que *hostNetwork=true*.
 - runAsUser/runAsGroup : exécuter en tant qu'utilisateur ou groupe spécifique, ou simplement empêcher l'exécution en tant que root.
-- Volumes : contrôlez les types de volume autorisés pour les volumes de stockage de pod.
-- allowHostPaths : limite les volumes hostPath à des chemins spécifiques uniquement.<br>
+- Volumes : contrôler les types de volume autorisés pour les volumes de stockage de pod.
+- allowHostPaths : limiter les volumes hostPath à des chemins spécifiques uniquement.<br>
 
 Les politiques de sécurité des pods sont obsolètes et seront remplacées par différentes fonctionnalités k8s à l'avenir ! <br>
 
