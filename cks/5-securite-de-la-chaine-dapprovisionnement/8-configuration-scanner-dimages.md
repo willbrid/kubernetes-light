@@ -6,7 +6,7 @@ Notre objectif sera d'installer et de configurer une telle application afin que 
 - Le contrôleur d'admission *ImagePolicyWebhook* envoie une requête JSON à un service externe pour déterminer si les images sont autorisées.
 - Le service externe fournit une réponse JSON indiquant si les images sont autorisées ou non.
 
-Il existe un exemple d'application de webhook que nous pouvons trouver le code source sur https://github.com/linuxacademy/content-cks-trivy-k8s-webhook <br>
+Il existe un exemple d'application de webhook dont nous pouvons trouver le code source sur https://github.com/linuxacademy/content-cks-trivy-k8s-webhook <br>
  
 Téléchargeons et installons le manifeste de pod statique pour le backend Trivy *ImagePolicyWebhook* :
 ```
