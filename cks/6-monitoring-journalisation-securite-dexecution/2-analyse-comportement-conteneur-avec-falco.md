@@ -13,7 +13,7 @@ falco -r rules.yml -M 45
 - output : Un format de sortie pour l'alerte.
 - *%fields* : % fait référence à un champ de données. Consultons la documentation Falco pour obtenir une liste des champs ou utilisons la commande *falco --list*. <br>
 
-Sur les deux noeuds worker, installez Falco :
+Sur les deux noeuds worker, installons Falco :
 ```
 curl -s https://falco.org/repo/falcosecurity-3672BA8F.asc | sudo apt-key add -
 ```
@@ -52,7 +52,7 @@ spec:
 kubectl create -f falco-test-pod.yml
 ```
 
-Sur le nœud k8s-worker1, créez un fichier de règles Falco :
+Sur le nœud k8s-worker1, créeons un fichier de règles Falco :
 ```
 vi falco-rules.yml
 ```
