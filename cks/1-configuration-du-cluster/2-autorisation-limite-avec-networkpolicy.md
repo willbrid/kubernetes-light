@@ -1,6 +1,6 @@
 # Autoriser un accès limité avec NetworkPolicies
 Les politiques de réseau ne sont pas en conflit ; ils sont additifs. Si une ou plusieurs stratégies sélectionnent un pod, le pod est limité à ce qui est autorisé par l'union des règles d'entrée/de sortie de ces stratégies.<br>
-Avec une politique de refus par défaut en place, nous pouvons autoriser le trafic nécessaire avec une politique ciblée supplémentaire.<br><br>
+Avec une politique de refus par défaut en place, nous pouvons autoriser le trafic nécessaire avec une politique ciblée supplémentaire.<br>
 
 Si une politique autorise un type particulier de trafic, il sera autorisé. Cela signifie que nous pouvons ajouter des politiques ciblées à côté d'une politique de refus par défaut pour autoriser le trafic nécessaire.<br>
 On utilise le *podSelector* d'une stratégie pour cibler la stratégie sur des pods spécifiques en fonction de leurs libellés.<br>
