@@ -71,7 +71,7 @@ spec:
 kubectl create -f apparmor-disk-write-pod.yml --save-config
 ```
 
-Vérifions les journaux du conteneur. Vérifions également le fichier *diskwrite.log* à l'intérieur du conteneur. Vous devriez voir que le conteneur est capable d'écrire sur le disque puisque le profil AppArmor n'est pas appliqué au conteneur.
+Vérifions les journaux du conteneur. Vérifions également le fichier *diskwrite.log* à l'intérieur du conteneur. Nous devrions voir que le conteneur est capable d'écrire sur le disque puisque le profil AppArmor n'est pas appliqué au conteneur.
 ```
 kubectl logs apparmor-disk-write
 kubectl exec apparmor-disk-write -- cat diskwrite.log
