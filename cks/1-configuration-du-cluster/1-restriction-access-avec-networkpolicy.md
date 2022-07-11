@@ -1,6 +1,6 @@
 # Restreindre l'accès par défaut avec NetworkPolicies
 
-Les NetworkPolicies vous permettent d'empêcher ou de restreindre la communication réseau vers et depuis les pods.<br>
+Les NetworkPolicies nous permettent d'empêcher ou de restreindre la communication réseau vers et depuis les pods.<br>
 
 On utilise une politique de refus de réseau par défaut pour bloquer tout le trafic réseau vers et/ou depuis les pods dans un espace de noms.<br>
 
