@@ -1,6 +1,6 @@
 # Explorer AppArmor
 *AppArmor* : module de noyau de sécurité Linux.<br>
-*AppArmor* fournit un contrôle d'accès granulaire pour les programmes exécutés sur les systèmes Linux. Utilisez AppArmor pour contrôler et limiter ce qu'un programme peut faire dans le système d'exploitation hôte.<br>
+*AppArmor* fournit un contrôle d'accès granulaire pour les programmes exécutés sur les systèmes Linux. Utilisons AppArmor pour contrôler et limiter ce qu'un programme peut faire dans le système d'exploitation hôte.<br>
 Un profil AppArmor est un ensemble de règles qui définissent ce qu'un programme peut et ne peut pas faire.<br>
 Par exemple ce profil empêchera le programme d'écrire des données sur le disque :
 ```
